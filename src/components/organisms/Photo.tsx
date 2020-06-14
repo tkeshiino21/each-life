@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
-import { Wrap, Image, Button, Img } from '../atoms';
+import { Wrap, Button, Img, Text } from '../atoms';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
 import { Photo as PhotoType, Asset } from '../../generated/graphql';
@@ -31,7 +31,8 @@ const Photo: FC<PhotoProps> = ({ photo }) => {
         src={!photo.image ? '' : photo.image.url}
         // style={{ width: '100%', height: '500px' }}
       />
-      {/* {isCommentOpen ? (
+      <Text>{photo.caption}</Text>
+      {isCommentOpen ? (
         <Button className="text" onClick={toggleCommentHandler}>
           コメントをしまう
           <MdKeyboardArrowUp />
@@ -51,7 +52,7 @@ const Photo: FC<PhotoProps> = ({ photo }) => {
         </>
       ) : (
         <div />
-      )} */}
+      )}
     </Wrap>
   );
 };

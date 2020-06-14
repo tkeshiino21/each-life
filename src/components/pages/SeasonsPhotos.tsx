@@ -1,8 +1,8 @@
 import React from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useGetSeasonPhotosQuery, Season } from '../../generated/graphql';
 import PageLayout from '../organisms/layout/PageLayout';
-import { Heading, Text, Button, Wrap, Loader } from '../atoms';
+import { Wrap, Loader } from '../atoms';
 import Photo from '../organisms/Photo';
 
 const SeasonsPhotos = () => {
