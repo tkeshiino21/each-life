@@ -31,7 +31,7 @@ const Photo: FC<PhotoProps> = ({ photo }) => {
         src={!photo.image ? '' : photo.image.url}
         // style={{ width: '100%', height: '500px' }}
       />
-      {isCommentOpen ? (
+      {/* {isCommentOpen ? (
         <Button className="text" onClick={toggleCommentHandler}>
           コメントをしまう
           <MdKeyboardArrowUp />
@@ -51,7 +51,7 @@ const Photo: FC<PhotoProps> = ({ photo }) => {
         </>
       ) : (
         <div />
-      )}
+      )} */}
     </Wrap>
   );
 };
