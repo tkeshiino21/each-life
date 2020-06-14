@@ -1,0 +1,22 @@
+overwrite: true
+schema: 'https://api-ap-northeast-1.graphcms.com/v2/ckbc80agu025201yucoh09m9d/master'
+documents: 'src/gql/**.ts'
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      gqlImport: '@apollo/client#gql'
+      apolloReactCommonImportFrom: '@apollo/client'
+      apolloReactComponentsImportFrom: '@apollo/client'
+      apolloReactHocImportFrom: '@apollo/client'
+      apolloReactHooksImportFrom: '@apollo/client'
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'

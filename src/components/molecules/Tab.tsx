@@ -1,6 +1,6 @@
 import React, { FC, ChangeEvent } from 'react';
 import styled from '@emotion/styled';
-import ds from '../../theme/theme';
+import ds from '../../theme/ds';
 
 const TabWrapper = styled.div`
   margin-top: 50px;

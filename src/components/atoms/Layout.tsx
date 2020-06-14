@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import ds from '../../theme/ds';
 
 type Wrap = {
   p?: string;
@@ -12,7 +13,14 @@ type Wrap = {
   mb?: string;
   mr?: string;
   ml?: string;
+
+  rm?: string;
+  rmt?: string;
+  rmb?: string;
+  rmr?: string;
+  rml?: string;
 };
+
 export const Wrap = styled.div<Wrap>`
   padding: ${(props) => props.p};
   padding-top: ${(props) => props.pt};
@@ -25,21 +33,31 @@ export const Wrap = styled.div<Wrap>`
   margin-bottom: ${(props) => props.mb};
   margin-right: ${(props) => props.mr};
   margin-left: ${(props) => props.ml};
+
+  @media (max-width: ${ds.bp('sm')}) {
+    margin: ${(props) => props.rm};
+    margin-top: ${(props) => props.rmt};
+    margin-bottom: ${(props) => props.rmb};
+    margin-right: ${(props) => props.rmr};
+    margin-left: ${(props) => props.rml};
+  }
 `;
 
 type Flex = {
   direction?: string;
   basis?: string;
-  grow?: string;
+  grow?: number;
   wrap?: string;
   justify?: string;
   align?: string;
   aligns?: string;
   width?: string;
   height?: string;
+  flex?: any;
 };
 export const Flex = styled.div<Flex>`
   display: flex;
+  flex: ${(props) => props.flex};
   flex-direction: ${(props) => props.direction};
   flex-basis: ${(props) => props.basis};
   flex-grow: ${(props) => props.grow};
@@ -47,7 +65,7 @@ export const Flex = styled.div<Flex>`
   justify-content: ${(props) => props.justify};
   align-content: ${(props) => props.align};
   align-items: ${(props) => props.aligns};
-  width: ${(props) => props.width};
+  width: ${(props) => props.width || '100%'};
   height: ${(props) => props.height};
 `;
 

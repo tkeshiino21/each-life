@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import ds from '../../theme/theme';
+import ds from '../../theme/ds';
 
 type Heading = {
   color?: string;

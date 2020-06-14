@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import ds from '../../theme/theme';
+import ds from '../../theme/ds';
 
 type Props = {
   text?: string;
@@ -14,7 +14,7 @@ type Props = {
 };
 export const Button = styled.button<Props>`
   box-sizing: border-box;
-  padding: 6px 16px;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;

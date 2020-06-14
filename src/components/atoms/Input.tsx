@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { InputHTMLAttributes } from 'react';
-import ds from '../../theme/theme';
+import ds from '../../theme/ds';
 
 export const Label = styled.label`
   font-weight: 400;

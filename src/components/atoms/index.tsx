@@ -8,4 +8,4 @@ export { Snackbar } from './Snackbar';
 export { Heading, Text } from './Typography';
 export { Paper } from './Paper';
 export { StyledLink, StyledNavLink } from './Link';
-export { Image } from './Image';
+export { Image, Img } from './Image';

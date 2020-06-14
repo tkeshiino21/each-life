@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link, NavLink } from 'react-router-dom';
-import ds from '../../theme/theme';
+import ds from '../../theme/ds';
 
 export const StyledLink = styled(Link)`
   color: inherit;
